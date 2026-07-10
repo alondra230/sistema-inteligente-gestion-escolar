@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Inteligente de Gestión Escolar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Inteligente de Gestión Escolar</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -28,11 +26,13 @@
 
 <section id="inicio" class="hero">
 
-    <h2>Bienvenido</h2>
+<h2>Bienvenido</h2>
 
-    <p>
-        Administra estudiantes y calificaciones de forma rápida, sencilla y segura.
-    </p>
+<p>
+Gestiona estudiantes, registra calificaciones y consulta información académica de forma rápida y sencilla.
+</p>
+
+<a href="#estudiantes" class="btn">Comenzar</a>
 
 </section>
 
@@ -41,10 +41,7 @@
 <h2>Sobre el Sistema</h2>
 
 <p>
-
-El Sistema Inteligente de Gestión Escolar facilita el registro de estudiantes,
-el control de notas y la administración de información académica.
-
+Este sistema fue creado para facilitar el registro de estudiantes, el control de notas y el cálculo automático de promedios mediante una interfaz moderna y fácil de utilizar.
 </p>
 
 </section>
@@ -53,15 +50,21 @@ el control de notas y la administración de información académica.
 
 <h2>Registro de Estudiantes</h2>
 
-<form>
+<form id="formulario">
 
-<input type="text" placeholder="Nombre del estudiante">
+<input type="text" id="nombre" placeholder="Nombre del estudiante" required>
 
-<input type="number" placeholder="Edad">
+<input type="number" id="edad" placeholder="Edad" required>
 
-<input type="text" placeholder="Grado">
+<input type="text" id="grado" placeholder="Grado" required>
 
-<button>Registrar</button>
+<input type="number" id="nota1" placeholder="Nota 1" min="0" max="100" required>
+
+<input type="number" id="nota2" placeholder="Nota 2" min="0" max="100" required>
+
+<input type="number" id="nota3" placeholder="Nota 3" min="0" max="100" required>
+
+<button type="submit">Registrar</button>
 
 </form>
 
@@ -69,13 +72,28 @@ el control de notas y la administración de información académica.
 
 <section id="notas">
 
-<h2>Gestión de Notas</h2>
+<h2>Listado de Estudiantes</h2>
 
-<p>
+<table id="tabla">
 
-Aquí podrás registrar las calificaciones y calcular el promedio de cada estudiante.
+<thead>
 
-</p>
+<tr>
+
+<th>Nombre</th>
+<th>Grado</th>
+<th>Promedio</th>
+<th>Estado</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+</tbody>
+
+</table>
 
 </section>
 
@@ -83,22 +101,15 @@ Aquí podrás registrar las calificaciones y calcular el promedio de cada estudi
 
 <h2>Contacto</h2>
 
-<p>
+<p>📧 contacto@gestionescolar.com</p>
 
-Correo:
-contacto@gestionescolar.com
-
-</p>
+<p>📍 Guatemala</p>
 
 </section>
 
 <footer>
 
-<p>
-
-© 2026 Sistema Inteligente de Gestión Escolar
-
-</p>
+<p>© 2026 Sistema Inteligente de Gestión Escolar</p>
 
 </footer>
 
